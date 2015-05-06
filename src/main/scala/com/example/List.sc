@@ -39,12 +39,13 @@ var res = new ArrayBuffer[Int]()
 addItem(l, res)
 res.toList
 
-for (i <- l) print(s" $i ")
-
-//for (i=0; i<l.length; i++) {
-//  for (j=i+1; j<) {
-//
-//  }
-//}
+for (i <- (0 to l.length - 1).reverse) {
+  println(s"i[$i] = ${l(i)}")
+  for (j <- ((i+ 1) to l.length - 1).reverse) {
+      println(s"j[$j] = ${l(j)}")
+  }
+}
+val i = 10
+((i+1) to 100).reverse.toList
 l.head
 l.tail.contains(l.head)
